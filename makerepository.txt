@@ -1,0 +1,50 @@
+1.GitHubにログインして「Start a project」をクリック
+
+2.「Repository name」と「Description」を入力し「Public」にチェックを入れ「Create repository」をクリック
+
+3.ページが変わりURLが表示されるのでコピーする
+
+4.次にローカルリポジトリを作成する為にIDEのターミナルを起動しディレクトリの作成、作成したディレクトリに移動
+  例　$ mkdir ディレクトリ名
+　　  $ cd ディレクトリ名
+
+5.ターミナルに「git init」と入力しローカルリポジトリを作成
+　「Initialize empty Git repository in ~」となれば完了
+
+6.次にファイルを作成して先ほど作成したローカルリポジトリに登録する為に
+  先ほど作成したディレクトリに任意のファイルを作成
+  例 $ vi test.txt
+
+7.作成したファイルに内容を入力
+  例 this is test
+
+8.作成したファイルをGitで管理できるようにする為、インデックスに追加する「git add」
+  例 $ git add test.txt
+
+9.Githubに登録しているメールアドレスと名前を入力する
+  $ git config --global user.email "YourEmail"
+  $ git config --global user.name "YourEame"
+
+10.「git commit」でリポジトリに登録する、"------"にはGitHubで作成したDescriptionを入力
+   例 $ git commit -m "------"
+
+11.下記が表示されたら完了
+　　[master (root-commit) 0e18041] "----------"
+    1 file changed, 5 insertions(+)
+    create mode 100644 "---------------"
+
+12.リモートリポジトリにPUSHする先を「git remote」を使い先ほどコピーしたURLに指定する
+    $ git remote add origin http---------
+
+13.リモートリポジトリに送信する為、下記を実行しGitHubのユーザーとパスワードを入力
+   $ git push origin master
+
+14.下記のように表示されたら完了、確認の為GitHubでも登録されているか確認する
+　　
+　　Counting objects: 3, done.
+　　Delta compression using up to 4 threads.
+　　Compressing objects: 100% (2/2), done.
+　　Writing objects: 100% (3/3), 419 bytes | 83.00 KiB/s, done.
+　　Total 3 (delta 0), reused 0 (delta 0)
+　　To ---------------------------------
+　　 * [new branch]      master -> master
