@@ -22,8 +22,8 @@
   例 $ git add test.txt
 
 9.Githubに登録しているメールアドレスと名前を入力する
-  $ git config --global user.email "YourEmail"
-  $ git config --global user.name "YourEame"
+  $ git config --global user.email YourEmail
+  $ git config --global user.name YourName
 
 10.「git commit」でリポジトリに登録する、"------"にはGitHubで作成したDescriptionを入力
    例 $ git commit -m "------"
